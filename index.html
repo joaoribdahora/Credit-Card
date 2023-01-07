@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cartão de Crédito</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <aside>
+            <div class="front">
+                <div>
+                    <div class="logo">
+                        <div class="largeLogo"></div>
+                        <div class="smallLogo"></div>
+                    </div>
+                </div>
+                <div class="chip"></div>
+                <div class="cardInfo">
+                    <div class="cardNumber">
+                        1234 1234 1234 1234
+                    </div>
+                    <div class="infos">
+                        <div class="name">
+                            Joao V L Ribeiro
+                        </div>
+                        <div class="date">
+                            12/28
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="code"></div>
+                <div class="sNumber">
+                    123
+                </div>
+                <div class="dets">
+                    <div class="fD">
+                        <div class="small"></div>
+                        <div class="large"></div>
+                    </div>
+                    <div class="sD">
+                        <div class="small"></div>
+                        <div class="small"></div>
+                        <div class="small"></div> 
+                    </div>
+                    <div class="tD">
+                        <div class="large"></div>
+                        <div class="small"></div>   
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <form>
+                <div class="cardName">
+                    Nome do Cartão: <br/>
+                    <input type="text" name="name"/>
+                </div>
+                <div class="number">
+                    Número do Cartão:<br/>
+                    <input type="number" name="number"/>
+                </div>
+                <div class="expDate">
+                    Data de validade (MM/AA): <br/>
+                    <div class="month">
+                        <input type="number" name="month" placeholder="MÊS"/>
+                    </div>
+                    <div class="year">
+                        <input type="number" name="year" placeholder="ANO"/>
+                    </div>
+                </div>
+                <div class="cvc">
+                    CVC: <br/>
+                    <input type="number" name="cvc" placeholder="ex: 123"/>
+                </div>
+                <button>Confirmar</button>
+            </form>
+        </section>
+    </body>
+</html>
