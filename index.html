@@ -54,30 +54,40 @@
             </div>
         </aside>
         <section>
-            <form>
+            <div class="form">
+
                 <div class="cardName">
                     Nome do Cartão: <br/>
-                    <input type="text" name="name"/>
+                    <input class="inportantInfo" type="text" name="name"/>
                 </div>
+
                 <div class="number">
                     Número do Cartão:<br/>
-                    <input type="number" name="number"/>
+                    <input class="inportantInfo" type="text" name="number"/>
                 </div>
+
                 <div class="expDate">
                     Data de validade (MM/AA): <br/>
-                    <div class="month">
-                        <input type="number" name="month" placeholder="MÊS"/>
-                    </div>
-                    <div class="year">
-                        <input type="number" name="year" placeholder="ANO"/>
+                    <div class="dataInput">
+                        <div class="month">
+                            <input class="inpDate" type="text" name="month" placeholder="MÊS"/>
+                        </div>
+                        / 
+                        <div class="year">
+                            <input class="inpDate" type="text" name="year" placeholder="ANO"/>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="cvc">
                     CVC: <br/>
-                    <input type="number" name="cvc" placeholder="ex: 123"/>
+                    <input class="inpCVC" type="text" name="cvc" placeholder="ex: 123"/>
                 </div>
                 <button>Confirmar</button>
-            </form>
+            </div>
+            <div class="footer">
+                Criado por <a href="https://github.com/joaoribdahora" target="_blank" style="color: rgb(122, 122, 122);">João Victor Ribeiro</a>
+            </div>
         </section>
     </body>
 </html>
