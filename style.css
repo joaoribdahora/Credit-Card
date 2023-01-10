@@ -208,7 +208,9 @@ button{
     color: #FFF;
     font-size: 15px;
 }
-
+button:active{
+    opacity: 0.7;
+}
 .footer{
     color: rgb(168, 168, 168);
     position: fixed;

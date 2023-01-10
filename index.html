@@ -58,30 +58,30 @@
 
                 <div class="cardName">
                     Nome do Cartão: <br/>
-                    <input class="inportantInfo" type="text" name="name"/>
+                    <input class="inportantInfo" type="text" name="name" data-rules="required"/>
                 </div>
 
                 <div class="number">
                     Número do Cartão:<br/>
-                    <input class="inportantInfo" type="text" name="number"/>
+                    <input class="inportantInfo" type="text" name="number" data-rules="required"/>
                 </div>
 
                 <div class="expDate">
                     Data de validade (MM/AA): <br/>
                     <div class="dataInput">
                         <div class="month">
-                            <input class="inpDate" type="text" name="month" placeholder="MÊS"/>
+                            <input class="inpDate" type="text" name="month" placeholder="MÊS" data-rules="required"/>
                         </div>
                         / 
                         <div class="year">
-                            <input class="inpDate" type="text" name="year" placeholder="ANO"/>
+                            <input class="inpDate" type="text" name="year" placeholder="ANO" data-rules="required"/>
                         </div>
                     </div>
                 </div>
                 
                 <div class="cvc">
                     CVC: <br/>
-                    <input class="inpCVC" type="text" name="cvc" placeholder="ex: 123"/>
+                    <input class="inpCVC" type="text" name="cvc" placeholder="ex: 123" data-rules="required"/>
                 </div>
                 <button>Confirmar</button>
             </div>
@@ -89,5 +89,6 @@
                 Criado por <a href="https://github.com/joaoribdahora" target="_blank" style="color: rgb(122, 122, 122);">João Victor Ribeiro</a>
             </div>
         </section>
+        <script src="script.js"></script>
     </body>
 </html>
