@@ -1,12 +1,14 @@
-let cardNumb = [];
+let cardNumb = ['0','1','2','3','4','5','6','7','8','9'];
 let dateMonth = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 let dateYear = '';
-let dataCVC = [];
 let alfabet = [' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 let cvcNumber = '';
 let cardName = '';
 let arrayCardName = [];
 let controlName = 0;
+let numbers = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09'];
+let arrayCardNumber = [];
+
 document.querySelector('button').addEventListener('click', send);
 
 //Essa função irá enviar as informações do cartão.
@@ -41,7 +43,7 @@ function send(){
 
 //Verificação de nome correto
     controlName = 0;
-    cardName = document.querySelector('.cardName .inportantInfo').value;
+    cardName = document.querySelector('.cardName .importantInfo').value;
     arrayCardName = cardName.toLocaleUpperCase().split('');
 
     for(let i = 0; i<arrayCardName.length; i++){
@@ -56,6 +58,63 @@ function send(){
     if(controlName === arrayCardName.length){
         //Permitir o envio do formulário
     }else{ 
+        //Bloquear o envio do formulário
+    }
+
+
+// Controle de informação do ano 
+
+    let inputYear = document.querySelector('.year .inpDate').value;
+    let controlYear = false;
+
+    
+    if(parseInt(inputYear) < 10 && parseInt(inputYear)>=0){
+        for(let i = 0; i<numbers.length; i++){
+            if(inputYear === numbers[i]){
+                controlYear = true;
+            }
+        }
+    }else{
+        if(parseInt(inputYear) >=10 && parseInt(inputYear)<=99){
+            controlYear = true;
+        }
+    }
+
+    if(controlYear){
+        //Permitir o envio do formulário
+    }else{
+        //Bloquear o envio do formulário
+    }
+
+
+//Controle do número do cartão
+
+    let controlCardNumber = false;
+    let sumControl = 0;
+    let inputCardNumber = document.querySelector('.number .importantInfo').value;
+    
+    arrayCardNumber = inputCardNumber.split('');
+    console.log(arrayCardNumber);
+
+    if(inputCardNumber.length === 16){
+        controlCardNumber = true;
+        console.log('quantidade de números correta');
+
+        for(let i = 0; i< arrayCardNumber.length; i++){
+            for(let j = 0; j< cardNumb.length; j++){
+                if(arrayCardNumber[i] === cardNumb[j]){
+                    sumControl++;
+                }
+            }
+        }
+
+        if(sumControl === 16){
+            //Permitir o envio do formulário
+        }else{
+            //Bloquear o envio do formulário
+        }
+
+    }else{
         //Bloquear o envio do formulário
     }
 
