@@ -190,5 +190,18 @@ function send(){
 }
 
 function formSent(){
+    document.querySelector('.form').style.display = 'none';
+    document.querySelector('.formSent').style.display = 'flex';
+
     
+    arrayCardNumber.splice(4, 0, ' ');
+    arrayCardNumber.splice(9, 0, ' ');
+    arrayCardNumber.splice(14, 0, ' ');
+
+    let cardNum = arrayCardNumber.join('');
+
+    document.querySelector('.cardNumber').innerHTML = cardNum;
+    document.querySelector('.name').innerHTML = document.querySelector('.cardName .importantInfo').value;
+    document.querySelector('.date').innerHTML = `${document.querySelector('.month .inpDate').value}/${document.querySelector('.year .inpDate').value}`;
+    document.querySelector('.sNumber').innerHTML = document.querySelector('.inpCVC').value;
 }
