@@ -59,11 +59,13 @@
                 <div class="cardName">
                     Nome do Cartão: <br/>
                     <input class="importantInfo" type="text" name="name" data-rules="required"/>
+                    <div class="erroInfo">Nome Inválido!</div>
                 </div>
 
                 <div class="number">
                     Número do Cartão:<br/>
                     <input class="importantInfo" type="text" name="number" data-rules="required"/>
+                    <div class="erroInfo">Número do Cartão Inválido!</div>
                 </div>
 
                 <div class="expDate">
@@ -76,15 +78,35 @@
                         <div class="year">
                             <input class="inpDate" type="text" name="year" placeholder="ANO" data-rules="required"/>
                         </div>
+                        <div class="erroInfo">Data Inválida!</div>
                     </div>
                 </div>
                 
                 <div class="cvc">
                     CVC: <br/>
-                    <input class="inpCVC" type="text" name="cvc" placeholder="ex: 123" data-rules="required"/>
+                    <div class="cvcInput">
+                        <input class="inpCVC" type="text" name="cvc" placeholder="ex: 123" data-rules="required"/>
+                        <div class="erroInfo">Código Inválido!</div>
+                    </div>
                 </div>
                 <button>Confirmar</button>
             </div>
+
+            <div class="formSent">
+                <div class="checked">
+                    <img src="icon-complete.svg"/>
+                </div>
+                <div class="checkedInfo">
+                    <div class="thanks">
+                        Obrigado!
+                    </div>
+                    <div class="smallInfo">
+                        Seu cartão foi cadastrado com sucesso.
+                    </div>
+                </div>
+                <button>Continuar</button>
+            </div>
+
             <div class="footer">
                 Criado por <a href="https://github.com/joaoribdahora" target="_blank" style="color: rgb(122, 122, 122);">João Victor Ribeiro</a>
             </div>
